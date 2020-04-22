@@ -1,0 +1,56 @@
+<style>
+    /*Format all paragraphs green on windows 100px or less in width*/
+    @media (max-width: 1000px) {
+        p{
+            color: green;
+        }
+    }
+
+    /*Scale the image to the maximum possible width, and adjust height to match*/
+    .scaling-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*Set width and height to small values so the images doesn't pixelate on high definition displays*/
+    .retina-img{
+        height: 250px; 
+        width: 250px;
+    }
+
+    .viewport-img{
+        height: 25vw; 
+        width: auto;
+    }
+
+</style>
+
+<body>
+
+    <header>
+        <H1>Responsive Web Design Notes</H1>
+    </header>
+
+    <p>
+        Paragraph text will be green when the screen is less than 1000px.
+    </p>
+
+    <p>The below image is set to a smaller size than the actual image so that it doesn't pixelate on high definition displays.</p>
+    <figure >
+        <!--Tab index of 1 focuses the item first before anything else on the page.-->
+        <img class="retina-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Blue Robot representing the Godot Logo">
+    </figure>
+
+    <p>The below image scales to a 25% of the available viewport (screen).</p>
+    <figure >
+        <!--Tab index of 1 focuses the item first before anything else on the page.-->
+        <img class="viewport-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Blue Robot representing the Godot Logo">
+    </figure>
+
+    <p>The below image uses CSS to scale to shrink if its container shrinks.</p>
+    <figure> 
+        <!--Tab index of 1 focuses the item first before anything else on the page.-->
+        <img  class="scaling-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Blue Robot representing the Godot Logo">
+    </figure>
+
+</body>
